@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ArquivoMedico", ".", "{EEABE135-4EA6-47DB-A103-4A73E93F1011}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/ArquivoMedico"
+		Debug.AspNetCompiler.PhysicalPath = "G:\OneDrive - Default Directory\OneDrive - rede.sp\ArquivoMedico\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ArquivoMedico\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ArquivoMedico"
+		Release.AspNetCompiler.PhysicalPath = "G:\OneDrive - Default Directory\OneDrive - rede.sp\ArquivoMedico\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ArquivoMedico\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1753"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEABE135-4EA6-47DB-A103-4A73E93F1011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEABE135-4EA6-47DB-A103-4A73E93F1011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

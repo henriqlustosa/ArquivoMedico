@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="Principal"  description="Página principal do web site">
+
+    <siteMapNode url="" title="Administração" roles="Administradores" description="Administração do Site">
+      <siteMapNode url="~/Restrito/UsuariosOnLine.aspx" title="Usuários Online" description="Usuários Online" />
+
+      <siteMapNode url="~/Restrito/CadastroUsuario.aspx" title="Cadastro Usuário" description="Cadastro de novos usuários do sistema" />
+      <siteMapNode url="~/Restrito/Permissao.aspx" title="Permissões" description="Cadastro de permissões para usuários do sistema" />
+      <siteMapNode url="~/Restrito/DesbloqueioUsuario.aspx" title="Desbloquear Usuário" description="Página para desbloquear de Usuário" />
+      <siteMapNode url="~/Restrito/ResetSenha.aspx" title="Resetar Senha" description="Resetar Senha do Usuário" />
+      <siteMapNode url="~/Restrito/Alterarcadastro.aspx" title="Alterar Usuário" description="Página para alterar Login de Usuário" />
+      <siteMapNode url="~/Restrito/DeletarUsuario.aspx" title="Excluir Usuário" description="Página para exclusão de Usuário" />
+    </siteMapNode>
+    
+    <siteMapNode url="" title="SAME" roles="SAME" description="">
+      <siteMapNode url="~/SameAdministrativo/SolicitacaoSame.aspx" title="Solicitação/Pedido do SAME"  description="Pedidos de Arquivos exclusivo do SAME" />
+      <siteMapNode url="~/SameAdministrativo/SolicitacaoesSameRecebidas.aspx" title="Solicitações/Pedidos Recebidos"  description="Pedidos de Arquivos recebidos do SAME" />
+      <siteMapNode url="~/SameAdministrativo/SolicitacoesSameNaoEncontradas.aspx" title="Solicitações/Pedidos Não Encontrados"  description="Pedidos de Arquivos não encontrados do SAME" />
+    </siteMapNode>
+
+    <siteMapNode url="" title="Listagem" roles="Listagem de Pedidos" description="">
+      <siteMapNode url="~/Pedidos/ListaPedidosPendentes.aspx" title="Pedidos Pendentes"  description="Pedidos de Arquivos pendentes exclusivo do SAME" />
+      <siteMapNode url="~/Pedidos/ListaPedidosInativos.aspx" title="Pedidos Inativos"  description="Pedidos de Arquivos Inativos" />
+    </siteMapNode>
+
+    <siteMapNode url="" title="Histórico" roles="Administradores,SAME,Listagem de Pedidos" description="">
+      <siteMapNode url="~/Pesquisa/HistoricoPaciente.aspx" title="Pesquisa Pedido"  description="Pesquisa Pedidos de Arquivos Por Nome do Paciente" />
+      </siteMapNode>
+   
+    <siteMapNode url="" title="Meu Perfil" roles="Administradores,SAME,Listagem de Pedidos"  description="Páginas relácionadas ao perfil de usuário" >
+      <siteMapNode url="~/Profile/AlterarSenha.aspx" title="Alterar Senha" description="Alteração de senha do usuário" />
+      <siteMapNode url="~/Profile/Perfil.aspx" title="Minhas Informações" description="Informações do perfil" />
+    </siteMapNode>
+
+  </siteMapNode>
+</siteMap>
