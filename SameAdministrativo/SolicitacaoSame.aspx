@@ -4,10 +4,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
-    <script src='<%= ResolveUrl("~/vendors/jquery/dist/jquery.js") %>' type="text/javascript"></script>
+   <!-- <script src='<%= ResolveUrl("~/vendors/jquery/dist/jquery.js") %>' type="text/javascript"></script>
 
     <!-- iCheck -->
+                  
+        
+
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet" />
+    <link href="../build/css/jquery.dataTable.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -47,7 +51,17 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
+
+<asp:ScriptManagerProxy ID="ScriptManagerProxy1" runat="server">
+      <Scripts>
+       <asp:ScriptReference Path="../vendors/jquery/dist/jquery.js" />
+        <asp:ScriptReference Path="../build/js/jquery.dataTables.js" /> 
+      </Scripts>
+     
+  </asp:ScriptManagerProxy>
     <div class="container">
+
+
         <div class="x_panel">
             <div class="x_title">
                 <h2>
@@ -60,12 +74,12 @@
                     <label>
                         RH/PRONTUÁRIO</label>
                     <asp:TextBox ID="txbProntuario" runat="server" class="form-control numeric" AutoPostBack="true"
-                        OnTextChanged="txbProntuario_TextChanged" required ></asp:TextBox>
+                        OnTextChanged="txbProntuario_TextChanged" ></asp:TextBox>
                 </div>
                 <div class="col-md-7 col-sm-12 col-xs-12 form-group">
                     <label>
                         Nome</label>
-                    <asp:TextBox ID="txbNomePaciente" runat="server" class="form-control" required></asp:TextBox>
+                    <asp:TextBox ID="txbNomePaciente" runat="server" class="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="row">
@@ -132,6 +146,8 @@
                 <div class="clearfix">
                 </div>
             </div>
+          <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+<ContentTemplate>
              <asp:GridView ID="GridView1" runat="server"  AutoGenerateColumns="False"
                 class="table table-striped jambo_table" DataKeyNames="id_ped_same" CellPadding="4" ForeColor="#333333"
                 GridLines="None" Width="100%"  OnRowCommand="grdMain_RowCommand" >
@@ -150,6 +166,8 @@
                    <asp:BoundField DataField="documento" HeaderText="Documento" SortExpression="documento"
                         ItemStyle-CssClass="hidden-xs" HeaderStyle-CssClass="hidden-xs" />
                     <asp:BoundField DataField="observacao" HeaderText="Observação" SortExpression="observacao"
+                        ItemStyle-CssClass="hidden-xs" HeaderStyle-CssClass="hidden-xs" /> 
+                         <asp:BoundField DataField="nota_same" HeaderText="Nota SAME" SortExpression="nota_same"
                         ItemStyle-CssClass="hidden-xs" HeaderStyle-CssClass="hidden-xs" />    
                    <asp:BoundField DataField="dataCadastro" HeaderText="Data do Pedido" SortExpression="dataCadastro"
                         ItemStyle-CssClass="hidden-xs" HeaderStyle-CssClass="hidden-xs" />
@@ -183,6 +201,16 @@
                             </div>
                         </ItemTemplate>
                     </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Editar" HeaderStyle-CssClass="sorting_disabled">
+                                <ItemTemplate>
+                                    <div class="form-inline">
+                                        <asp:LinkButton ID="gvlnkDeleteNota" CommandName="editNotaRecord" CommandArgument='<%#((GridViewRow)Container).RowIndex%>'
+                                            runat="server">
+                                    <i class="fa fa-pencil-square-o fa-2x" style="color: red" ></i>
+                                        </asp:LinkButton>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                 </Columns>
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
@@ -192,6 +220,87 @@
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             </asp:GridView>
          
-        </div>
+     
+     <!-- Large modal -->
+    
+                    <div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">
+                                        Detalhes do Pedido</h4>
+                                   
+                                     <asp:Button ID="Button3" runat="server" Text="x" class="close"  OnClick="btnClose_Click" />
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="modal-body">
+                                            <div class="form-group row">
+                                                <label for="txtID" class="col-sm-2 col-form-label">
+                                                    ID:</label>
+                                                <div class="col-sm-10">
+                                                    <asp:Label ID="txbID" runat="server" Text=""></asp:Label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="txbProntuario" class="col-sm-2 col-form-label">
+                                                    Prontuário:</label>
+                                                <div class="col-sm-4">
+                                                    <asp:TextBox ID="txbProntuarioModal" runat="server" Enabled="false" class="form-control"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="txbNomePacienteModal" class="col-sm-2 col-form-label">
+                                                    Nome Paciente:</label>
+                                                <div class="col-sm-10">
+                                                    <asp:TextBox ID="txbNomePacienteModal" runat="server" Enabled="false" class="form-control"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="form-group row">
+                                                <asp:RadioButtonList ID="rblStatus" CssClass="radioboxlist" runat="server">
+                                                    <asp:ListItem  Selected>PENDENTE</asp:ListItem>
+                                                    
+                                                </asp:RadioButtonList>
+                                            </div>
+                                            <div class="form-group">
+                                                <asp:Label ID="Label1" for="txbNota" runat="server" Text="Nota do SAME:"></asp:Label>
+                                                <asp:TextBox ID="txbNota" runat="server" class="form-control" TextMode="MultiLine"
+                                                    Rows="4"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <asp:Button ID="Button1" runat="server" Text="Gravar" class="btn btn-primary" OnClick="btnEditar_Click" />
+                                     <asp:Button ID="Button2" runat="server" Text="Cancelar" class="btn btn-secondary" OnClick="btnCancelar_Click" />
+                                   
+                                       
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fim modal large -->
+           </ContentTemplate>
+            </asp:UpdatePanel>
+                       </div>
     </div>
+      
+     <script type="text/javascript">
+         $(document).ready(function() {
+
+             $('#<%= GridView1.ClientID %>').prepend($("<thead></thead>").append($('#<%= GridView1.ClientID %>').find("tbody tr:first"))).DataTable({
+                 language: {
+                     search: "<i class='fa fa-search' aria-hidden='true'></i>",
+                     processing: "Processando...",
+                     lengthMenu: "Mostrando _MENU_ registros por páginas",
+                     info: "Mostrando página _PAGE_ de _PAGES_",
+                     infoEmpty: "Nenhum registro encontrado",
+                     infoFiltered: "(filtrado de _MAX_ registros no total)"
+                 }
+             });
+
+         });
+         </script>
 </asp:Content>

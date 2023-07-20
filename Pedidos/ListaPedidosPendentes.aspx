@@ -3,6 +3,7 @@
     Title="ARQUIVO HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <link href="../build/css/jquery.dataTable.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .radioboxlist radioboxlistStyle
         {
@@ -36,8 +37,13 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server">
-    </asp:ScriptManager>
+    <asp:ScriptManagerProxy ID="ScriptManagerProxy1" runat="server">
+      <Scripts>
+       <asp:ScriptReference Path="../vendors/jquery/dist/jquery.js" />
+        <asp:ScriptReference Path="../build/js/jquery.dataTables.js" /> 
+      </Scripts>
+     
+  </asp:ScriptManagerProxy>
     <h1>
         Lista de pedidos de Prontuários/Documentos Pendentes</h1>
     <div class="container">
@@ -74,6 +80,8 @@
                             <asp:BoundField DataField="documento" HeaderText="Documento" SortExpression="documento"
                                 ItemStyle-CssClass="hidden-xs" HeaderStyle-CssClass="hidden-xs" />
                             <asp:BoundField DataField="observacao" HeaderText="Observação" SortExpression="observacao"
+                                ItemStyle-CssClass="hidden-xs" HeaderStyle-CssClass="hidden-xs" />
+                                 <asp:BoundField DataField="nota_same" HeaderText="Nota SAME" SortExpression="nota_same"
                                 ItemStyle-CssClass="hidden-xs" HeaderStyle-CssClass="hidden-xs" />
                             <asp:BoundField DataField="dataCadastro" HeaderText="Data do Pedido" SortExpression="dataCadastro"
                                 ItemStyle-CssClass="hidden-xs" HeaderStyle-CssClass="hidden-xs" />
@@ -178,4 +186,21 @@
             </asp:UpdatePanel>
         </div>
     </div>
+    
+     <script type="text/javascript">
+         $(document).ready(function() {
+
+             $('#<%= GridView1.ClientID %>').prepend($("<thead></thead>").append($('#<%= GridView1.ClientID %>').find("tbody tr:first"))).DataTable({
+                 language: {
+                     search: "<i class='fa fa-search' aria-hidden='true'></i>",
+                     processing: "Processando...",
+                     lengthMenu: "Mostrando _MENU_ registros por páginas",
+                     info: "Mostrando página _PAGE_ de _PAGES_",
+                     infoEmpty: "Nenhum registro encontrado",
+                     infoFiltered: "(filtrado de _MAX_ registros no total)"
+                 }
+             });
+
+         });
+         </script>
 </asp:Content>

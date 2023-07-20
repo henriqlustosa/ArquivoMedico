@@ -27,6 +27,7 @@ public partial class Pedidos_ListaPedidosPendentes : System.Web.UI.Page
     {
         try
         {
+            
             GridView1.DataSource = PedidoDAO.CarregaListaPedidosSame();
             GridView1.DataBind();
         }

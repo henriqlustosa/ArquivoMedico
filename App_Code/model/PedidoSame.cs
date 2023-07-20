@@ -18,4 +18,5 @@ public class PedidoSame : Pedido
     public int id_ped_same { get; set; }
     public string arquivo_satelie { get; set; }
     public string documento { get; set; }
+    public string nota_same { get; set; }
 }

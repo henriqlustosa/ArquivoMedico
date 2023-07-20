@@ -148,50 +148,157 @@ public partial class Administrativo_SolicitacaoSame : System.Web.UI.Page
             string err1 = ex1.Message;
         }
     }
+    protected void btnEditar_Click(object sender, EventArgs e)
+    {
+        string _id = txbID.Text;
+        string _status = rblStatus.SelectedItem.Value;
+        string _nota = txbNota.Text + " Registro em " + DateTime.Now + " por " + System.Web.HttpContext.Current.User.Identity.Name;
 
+        using (SqlConnection cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["arquivoConnectionString"].ToString()))
+        {
+            SqlCommand cmm = new SqlCommand();
+
+            cmm.Connection = cnn;
+            cnn.Open();
+            SqlTransaction mt = cnn.BeginTransaction();
+            cmm.Transaction = mt;
+            try
+            {
+                cmm.CommandText = "UPDATE [pedido_same]" +
+                                           "SET " +
+                                              "status = @status, " +
+                                              "nota_same = @nota " +
+                                               " WHERE  id_ped_same = @id";
+                cmm.Parameters.Add(new SqlParameter("@id", _id));
+                cmm.Parameters.Add(new SqlParameter("@status", _status));
+                cmm.Parameters.Add(new SqlParameter("@nota", _nota));
+                cmm.ExecuteNonQuery();
+                mt.Commit();
+                mt.Dispose();
+
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                string mensagem = ex.Message;
+                try
+                {
+                    mt.Rollback();
+                }
+                catch (Exception ex1)
+                { }
+            }
+        }
+        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+        sb.Append("$('.modal-backdrop').remove();");
+        sb.Append("$(document.body).removeClass('modal-open');");
+
+        ScriptManager.RegisterStartupScript(Page, this.Page.GetType(), "clientscript", sb.ToString(), true);
+
+        ClearInputs(Page.Controls);// limpa os textbox
+        Page.Response.Redirect(Page.Request.Url.ToString(), true);
+    }
+
+    protected void btnCancelar_Click(object sender, EventArgs e)
+    {
+       
+
+        ClearInputs(Page.Controls);// limpa os textbox
+        Page.Response.Redirect(Page.Request.Url.ToString(), true);
+    }
+    protected void btnClose_Click(object sender, EventArgs e)
+    {
+
+
+        ClearInputs(Page.Controls);// limpa os textbox
+        Page.Response.Redirect(Page.Request.Url.ToString(), true);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    void ClearInputs(ControlCollection ctrls)
+    {
+        foreach (Control ctrl in ctrls)
+        {
+            if (ctrl is TextBox)
+                ((TextBox)ctrl).Text = string.Empty;
+            ClearInputs(ctrl.Controls);
+        }
+    }
     protected void grdMain_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         int index;
         string usuario = System.Web.HttpContext.Current.User.Identity.Name;
-
-        if (e.CommandName.Equals("editRecord"))
+        if (e.CommandName.Equals("editNotaRecord"))
         {
             index = Convert.ToInt32(e.CommandArgument);
 
             int _id = Convert.ToInt32(GridView1.DataKeys[index].Value.ToString()); //id da consulta
 
-            string recebido = PedidoDAO.getPedidoSame(_id).status;
-            if (recebido.Equals("RECEBIDO"))
-            {
-                PedidoDAO.SameRecebido(_id, usuario, "PENDENTE");
-            }
-            else if (recebido.Equals("PENDENTE NÃO ENCONTRADO"))
-            {
-                PedidoDAO.SameRecebido(_id, usuario, "NÃO ENCONTRADO");
-            }
-            else
-            {
-                PedidoDAO.SameRecebido(_id, usuario, "RECEBIDO");
-            }
-        }
+            var p = PedidoDAO.getPedidoSame(_id);
 
-        if (e.CommandName.Equals("deleteRecord"))
+            txbID.Text = p.id_ped_same.ToString();
+            txbProntuarioModal.Text = p.prontuario.ToString();
+            txbNomePacienteModal.Text = p.nm_paciente;
+         
+
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "none",
+                    "<script>$('#editModal').modal('show');</script>", false);
+        
+         
+        }
+        else
         {
-            index = Convert.ToInt32(e.CommandArgument);
-
-            int _id = Convert.ToInt32(GridView1.DataKeys[index].Value.ToString()); //id da consulta
-
-            string recebido = PedidoDAO.getPedidoSame(_id).status;
-            if (recebido.Equals("RECEBIDO"))
+            if (e.CommandName.Equals("editRecord"))
             {
-                //pedido já recebido, não é possivel excluir
-                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('pedido já recebido, não é possivel excluir');", true);
+                index = Convert.ToInt32(e.CommandArgument);
+
+                int _id = Convert.ToInt32(GridView1.DataKeys[index].Value.ToString()); //id da consulta
+
+                string recebido = PedidoDAO.getPedidoSame(_id).status;
+                if (recebido.Equals("RECEBIDO"))
+                {
+                    PedidoDAO.SameRecebido(_id, usuario, "PENDENTE");
+                }
+                else if (recebido.Equals("PENDENTE NÃO ENCONTRADO"))
+                {
+                    PedidoDAO.SameRecebido(_id, usuario, "NÃO ENCONTRADO");
+                }
+                else
+                {
+                    PedidoDAO.SameRecebido(_id, usuario, "RECEBIDO");
+                }
             }
-            else
+
+            if (e.CommandName.Equals("deleteRecord"))
             {
-                PedidoDAO.SameExcluiPedido(_id);
+                index = Convert.ToInt32(e.CommandArgument);
+
+                int _id = Convert.ToInt32(GridView1.DataKeys[index].Value.ToString()); //id da consulta
+
+                string recebido = PedidoDAO.getPedidoSame(_id).status;
+                if (recebido.Equals("RECEBIDO"))
+                {
+                    //pedido já recebido, não é possivel excluir
+                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('pedido já recebido, não é possivel excluir');", true);
+                }
+                else
+                {
+                    PedidoDAO.SameExcluiPedido(_id);
+                }
             }
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
-        Page.Response.Redirect(Page.Request.Url.ToString(), true);
     }
 }

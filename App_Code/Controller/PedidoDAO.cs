@@ -271,7 +271,7 @@ public class PedidoDAO
                                  " ,[usuario_solicitante]" +
                                  " ,[status]" +
                                  " ,[nota]" +
-                              "FROM [hspmArquivo].[dbo].[pedido_same]" +
+                              "FROM [hspmArquivo_Homologacao].[dbo].[pedido_same]" +
                               " WHERE id_ped_same = " + _id;
 
             cmm.CommandText = sqlConsulta;
@@ -462,6 +462,7 @@ public class PedidoDAO
                               ",[usuario_solicitante]" +
                               ",[status]" +
                               ",[nota]" +
+                              ",[nota_same]" +
                               " FROM [pedido_same] " +
                               " WHERE status NOT IN ('RECEBIDO')" +
                               " ORDER BY data_pedido ASC";
@@ -487,6 +488,7 @@ public class PedidoDAO
                     p.dataCadastro = dr1.GetDateTime(6);
                     p.usuario_solicitante = dr1.GetString(7);
                     p.status = dr1.GetString(8);
+                    p.nota_same = dr1.IsDBNull(10) ? "" : dr1.GetString(10);
                     if (p.status.Equals("PENDENTE"))
                     {
                         p.textRecebido = "<i class='fa fa-toggle-off' title='Solicitado'></i>";
@@ -526,6 +528,7 @@ public class PedidoDAO
                               ",[usuario_solicitante]" +
                               ",[status]" +
                               ",[nota]" +
+                              ",[nota_same]" +
                               " FROM [pedido_same] " +
                               " WHERE status = 'PENDENTE'" +
                               " ORDER BY data_pedido ASC";
@@ -551,6 +554,7 @@ public class PedidoDAO
                     p.dataCadastro = dr1.GetDateTime(6);
                     p.usuario_solicitante = dr1.GetString(7);
                     p.status = dr1.GetString(8);
+                    p.nota_same = dr1.IsDBNull(10) ? "" : dr1.GetString(10);
                     if (p.status.Equals("PENDENTE"))
                     {
                         p.textRecebido = "<i class='fa fa-toggle-off' title='Solicitado'></i>";
@@ -750,7 +754,7 @@ public class PedidoDAO
                                     " ,[usuario_recebeu]" +
                                     " ,[status]" +
                                     " ,[nota]" +
-                                  " FROM [hspmArquivo].[dbo].[vw_same_arquivo_recebido] " +
+                                  " FROM [hspmArquivo_Homologacao].[dbo].[vw_same_arquivo_recebido] " +
                                   " WHERE [nome_paciente] LIKE '%" + _nome + "%'" +
                                   " ORDER BY [data_pedido] desc";
             // implementar listar apenas os ultimos 30 dias
@@ -828,7 +832,7 @@ public class PedidoDAO
                                     " ,[usuario_recebeu]" +
                                     " ,[status]" +
                                     " ,[nota]" +
-                                  " FROM [hspmArquivo].[dbo].[vw_same_arquivo_recebido] " +
+                                  " FROM [hspmArquivo_Homologacao].[dbo].[vw_same_arquivo_recebido] " +
                                   sqlWherePeriodo +
                                   " ORDER BY [data_pedido] desc";
 
@@ -906,7 +910,7 @@ public class PedidoDAO
                                 
                                     " ,[status]" +
                                     " ,[nota]" +
-                                  " FROM [hspmArquivo].[dbo].[pedido_same] where status  IN ('NÃO ENCONTRADO')  " +
+                                  " FROM [hspmArquivo_Homologacao].[dbo].[pedido_same] where status  IN ('NÃO ENCONTRADO')  " +
                                   sqlWherePeriodo +
                                   " ORDER BY [data_pedido] desc";
 
