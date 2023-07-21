@@ -261,6 +261,7 @@
                                             <div class="form-group row">
                                                 <asp:RadioButtonList ID="rblStatus" CssClass="radioboxlist" runat="server">
                                                     <asp:ListItem  Selected>PENDENTE</asp:ListItem>
+                                                    <asp:ListItem  >ENCONTRADO</asp:ListItem>
                                                     
                                                 </asp:RadioButtonList>
                                             </div>

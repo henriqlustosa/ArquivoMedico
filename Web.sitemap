@@ -19,7 +19,7 @@
       <siteMapNode url="~/SameAdministrativo/SolicitacoesSameNaoEncontradas.aspx" title="Solicitações/Pedidos Não Encontrados"  description="Pedidos de Arquivos não encontrados do SAME" />
     </siteMapNode>
 
-    <siteMapNode url="" title="Listagem" roles="Listagem de Pedidos" description="">
+    <siteMapNode url="" title="Arquivo" roles="Listagem de Pedidos" description="">
       <siteMapNode url="~/Pedidos/ListaPedidosPendentes.aspx" title="Pedidos Pendentes"  description="Pedidos de Arquivos pendentes exclusivo do SAME" />
       <siteMapNode url="~/Pedidos/ListaPedidosInativos.aspx" title="Pedidos Inativos"  description="Pedidos de Arquivos Inativos" />
     </siteMapNode>
