@@ -271,7 +271,7 @@ public class PedidoDAO
                                  " ,[usuario_solicitante]" +
                                  " ,[status]" +
                                  " ,[nota]" +
-                              "FROM [hspmArquivo_Homologacao].[dbo].[pedido_same]" +
+                              "FROM [hspmArquivo].[dbo].[pedido_same]" +
                               " WHERE id_ped_same = " + _id;
 
             cmm.CommandText = sqlConsulta;
@@ -754,7 +754,7 @@ public class PedidoDAO
                                     " ,[usuario_recebeu]" +
                                     " ,[status]" +
                                     " ,[nota]" +
-                                  " FROM [hspmArquivo_Homologacao].[dbo].[vw_same_arquivo_recebido] " +
+                                  " FROM [hspmArquivo].[dbo].[vw_same_arquivo_recebido] " +
                                   " WHERE [nome_paciente] LIKE '%" + _nome + "%'" +
                                   " ORDER BY [data_pedido] desc";
             // implementar listar apenas os ultimos 30 dias
@@ -832,7 +832,7 @@ public class PedidoDAO
                                     " ,[usuario_recebeu]" +
                                     " ,[status]" +
                                     " ,[nota]" +
-                                  " FROM [hspmArquivo_Homologacao].[dbo].[vw_same_arquivo_recebido] " +
+                                  " FROM [hspmArquivo].[dbo].[vw_same_arquivo_recebido] " +
                                   sqlWherePeriodo +
                                   " ORDER BY [data_pedido] desc";
 
@@ -910,7 +910,7 @@ public class PedidoDAO
                                 
                                     " ,[status]" +
                                     " ,[nota]" +
-                                  " FROM [hspmArquivo_Homologacao].[dbo].[pedido_same] where status  IN ('NÃO ENCONTRADO')  " +
+                                  " FROM [hspmArquivo].[dbo].[pedido_same] where status  IN ('NÃO ENCONTRADO')  " +
                                   sqlWherePeriodo +
                                   " ORDER BY [data_pedido] desc";
 
