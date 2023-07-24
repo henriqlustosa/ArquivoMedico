@@ -2,14 +2,20 @@
     CodeFile="HistoricoPaciente.aspx.cs" Inherits="Pesquisa_HistoricoPaciente" Title="ARQUIVO HSPM" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    
+ <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet" />
     <link href="../build/css/jquery.dataTable.css" rel="stylesheet" type="text/css" />
-
-    <script src='<%= ResolveUrl("~/vendors/jquery/dist/jquery.js") %>' type="text/javascript"></script>
+   
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server">
-    </asp:ScriptManager>
+     <asp:ScriptManagerProxy ID="ScriptManagerProxy1" runat="server">
+      <Scripts>
+       <asp:ScriptReference Path="../vendors/jquery/dist/jquery.js" />
+        <asp:ScriptReference Path="../build/js/jquery.dataTables.js" /> 
+      </Scripts>
+     
+  </asp:ScriptManagerProxy>
     <div class="container">
         <div class="x_panel">
             <div class="x_title">
@@ -91,17 +97,16 @@
         </div>
     </div>
 
-    <script src='<%= ResolveUrl("~/vendors/jquery/dist/jquery.js") %>' type="text/javascript"></script>
+
 
     <!-- Bootstrap -->
 
     <script src='<%= ResolveUrl("~/vendors/bootstrap/dist/js/bootstrap431.js") %>' type="text/javascript"></script>
 
-    <script src='<%= ResolveUrl("~/build/js/jquery.dataTables.js") %>' type="text/javascript"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
-            $.noConflict();
+         
             $('#<%= GridView1.ClientID %>').prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable({
                 language: {
                     search: "<i class='fa fa-search' aria-hidden='true'></i>",

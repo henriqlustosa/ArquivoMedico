@@ -271,6 +271,7 @@ public class PedidoDAO
                                  " ,[usuario_solicitante]" +
                                  " ,[status]" +
                                  " ,[nota]" +
+                                  " ,[nota_same]" +
                               "FROM [hspmArquivo].[dbo].[pedido_same]" +
                               " WHERE id_ped_same = " + _id;
 
@@ -295,6 +296,7 @@ public class PedidoDAO
                     p.usuario_solicitante = dr1.GetString(7);
                     p.status = dr1.GetString(8);
                     p.nota = dr1.IsDBNull(9) ? "" : dr1.GetString(9);
+                    p.nota_same = dr1.IsDBNull(10) ? "" : dr1.GetString(10);
                 }
             }
             catch (Exception ex)

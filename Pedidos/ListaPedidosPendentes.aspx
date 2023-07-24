@@ -50,7 +50,7 @@
         <div class="x_panel">
             <div class="x_title">
                 <h2>
-                    SAME</h2>
+                    ARQUIVO</h2>
                    
                 <div class="clearfix">
                 </div>

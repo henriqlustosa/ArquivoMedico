@@ -247,7 +247,7 @@ public partial class Administrativo_SolicitacaoSame : System.Web.UI.Page
             int _id = Convert.ToInt32(GridView1.DataKeys[index].Value.ToString()); //id da consulta
 
             var p = PedidoDAO.getPedidoSame(_id);
-
+            txbNota.Text = p.nota_same;
             txbID.Text = p.id_ped_same.ToString();
             txbProntuarioModal.Text = p.prontuario.ToString();
             txbNomePacienteModal.Text = p.nm_paciente;
