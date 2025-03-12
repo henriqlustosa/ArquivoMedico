@@ -5,8 +5,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server">
-    </asp:ScriptManager>
+<%--    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>--%>
     <div class="x_title">
         <h2>
             Desbloquear Usuário</h2>

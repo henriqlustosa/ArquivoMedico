@@ -1,0 +1,178 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|g:\\onedrive - default directory\\onedrive - rede.sp\\arquivomedico_2024\\arquivomedico\\restrito\\usuariosonline.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|solutionrelative:restrito\\usuariosonline.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|g:\\onedrive - default directory\\onedrive - rede.sp\\arquivomedico_2024\\arquivomedico\\restrito\\alterarcadastro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|solutionrelative:restrito\\alterarcadastro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|g:\\onedrive - default directory\\onedrive - rede.sp\\arquivomedico_2024\\arquivomedico\\restrito\\deletarusuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|solutionrelative:restrito\\deletarusuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|g:\\onedrive - default directory\\onedrive - rede.sp\\arquivomedico_2024\\arquivomedico\\restrito\\desbloqueiousuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|solutionrelative:restrito\\desbloqueiousuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|g:\\onedrive - default directory\\onedrive - rede.sp\\arquivomedico_2024\\arquivomedico\\restrito\\permissao.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|solutionrelative:restrito\\permissao.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|g:\\onedrive - default directory\\onedrive - rede.sp\\arquivomedico_2024\\arquivomedico\\restrito\\resetsenha.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|solutionrelative:restrito\\resetsenha.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|g:\\onedrive - default directory\\onedrive - rede.sp\\arquivomedico_2024\\arquivomedico\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|solutionrelative:masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|g:\\onedrive - default directory\\onedrive - rede.sp\\arquivomedico_2024\\arquivomedico\\masterpage.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{675B1A57-B0C2-468D-8F7E-345BFD6D67A4}|G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico|solutionrelative:masterpage.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 367,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlterarCadastro.aspx",
+              "DocumentMoniker": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\AlterarCadastro.aspx",
+              "RelativeDocumentMoniker": "Restrito\\AlterarCadastro.aspx",
+              "ToolTip": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\AlterarCadastro.aspx",
+              "RelativeToolTip": "Restrito\\AlterarCadastro.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-12T20:13:48.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeletarUsuario.aspx",
+              "DocumentMoniker": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\DeletarUsuario.aspx",
+              "RelativeDocumentMoniker": "Restrito\\DeletarUsuario.aspx",
+              "ToolTip": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\DeletarUsuario.aspx",
+              "RelativeToolTip": "Restrito\\DeletarUsuario.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-12T20:13:07.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DesbloqueioUsuario.aspx",
+              "DocumentMoniker": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\DesbloqueioUsuario.aspx",
+              "RelativeDocumentMoniker": "Restrito\\DesbloqueioUsuario.aspx",
+              "ToolTip": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\DesbloqueioUsuario.aspx",
+              "RelativeToolTip": "Restrito\\DesbloqueioUsuario.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-12T20:12:55.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Permissao.aspx",
+              "DocumentMoniker": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\Permissao.aspx",
+              "RelativeDocumentMoniker": "Restrito\\Permissao.aspx",
+              "ToolTip": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\Permissao.aspx",
+              "RelativeToolTip": "Restrito\\Permissao.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-12T20:12:45.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ResetSenha.aspx",
+              "DocumentMoniker": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\ResetSenha.aspx",
+              "RelativeDocumentMoniker": "Restrito\\ResetSenha.aspx",
+              "ToolTip": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\ResetSenha.aspx",
+              "RelativeToolTip": "Restrito\\ResetSenha.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-12T20:12:31.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosOnLine.aspx",
+              "DocumentMoniker": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\UsuariosOnLine.aspx",
+              "RelativeDocumentMoniker": "Restrito\\UsuariosOnLine.aspx",
+              "ToolTip": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\Restrito\\UsuariosOnLine.aspx",
+              "RelativeToolTip": "Restrito\\UsuariosOnLine.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-12T20:10:30.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MasterPage.master",
+              "DocumentMoniker": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\MasterPage.master",
+              "RelativeDocumentMoniker": "MasterPage.master",
+              "ToolTip": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\MasterPage.master",
+              "RelativeToolTip": "MasterPage.master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-12T20:09:18.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MasterPage.master.cs",
+              "DocumentMoniker": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\MasterPage.master.cs",
+              "RelativeDocumentMoniker": "MasterPage.master.cs",
+              "ToolTip": "G:\\OneDrive - Default Directory\\OneDrive - rede.sp\\ArquivoMedico_2024\\ArquivoMedico\\MasterPage.master.cs",
+              "RelativeToolTip": "MasterPage.master.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:09:19.057Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 79,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

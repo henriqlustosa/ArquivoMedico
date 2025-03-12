@@ -41,7 +41,7 @@ public partial class Pesquisa_ReportPedidoRecebido : System.Web.UI.Page
 
         //SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=hspmArquivo;Integrated Security= True");
 
-        SqlConnection con = new SqlConnection(@"Data Source=10.48.16.28;database=hspmArquivo; Persist Security Info=True;user id=hspmApp;password=SoundG@rden=1");
+        SqlConnection con = new SqlConnection(@"Data Source=hspmins17a;database=hspmArquivo; Persist Security Info=True;user id=hspmApp;password=SoundG@rden=1");
 
         string sqlString = "SELECT * " +
                       " FROM [hspmArquivo].[dbo].[vw_same_arquivo_recebido] " +
